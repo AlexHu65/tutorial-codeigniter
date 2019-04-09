@@ -570,7 +570,7 @@ ones.</p>
 <h2><a class="toc-backref" href="#id6">Defining a Default Controller</a><a class="headerlink" href="#defining-a-default-controller" title="Permalink to this headline">¶</a></h2>
 <p>CodeIgniter can be told to load a default controller when a URI is not
 present, as will be the case when only your site root URL is requested.
-To specify a default controller, open your <strong>application/config/routes.php</strong>
+To specify a default controller, open your <strong>application/config/pathFrontEnd.php</strong>
 file and set this variable:</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$route</span><span class="p">[</span><span class="s1">&#39;default_controller&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;blog&#39;</span><span class="p">;</span>
 </pre></div>
@@ -723,7 +723,7 @@ here:</p>
 <p>Each of your sub-directories may contain a default controller which will be
 called if the URL contains <em>only</em> the sub-directory. Simply put a controller
 in there that matches the name of your ‘default_controller’ as specified in
-your <em>application/config/routes.php</em> file.</p>
+your <em>application/config/pathFrontEnd.php</em> file.</p>
 <p>CodeIgniter also permits you to remap your URIs using its <a class="reference internal" href="routing.html"><span class="doc">URI
 Routing</span></a> feature.</p>
 </div>

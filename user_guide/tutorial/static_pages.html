@@ -541,13 +541,13 @@ the header and footer.</p>
 controller and method, and break free from the normal convention:
 <code class="docutils literal"><span class="pre">http://example.com/[controller-class]/[controller-method]/[arguments]</span></code></p>
 <p>Let’s do that. Open the routing file located at
-<em>application/config/routes.php</em> and add the following two lines.
+<em>application/config/pathFrontEnd.php</em> and add the following two lines.
 Remove all other code that sets any element in the <code class="docutils literal"><span class="pre">$route</span></code> array.</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$route</span><span class="p">[</span><span class="s1">&#39;default_controller&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;pages/view&#39;</span><span class="p">;</span>
 <span class="nv">$route</span><span class="p">[</span><span class="s1">&#39;(:any)&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;pages/view/$1&#39;</span><span class="p">;</span>
 </pre></div>
 </div>
-<p>CodeIgniter reads its routing rules from top to bottom and routes the
+<p>CodeIgniter reads its routing rules from top to bottom and pathFrontEnd the
 request to the first matching rule. Each rule is a regular expression
 (left-side) mapped to a controller and method name separated by slashes
 (right-side). When a request comes in, CodeIgniter looks for the first
@@ -555,7 +555,7 @@ match, and calls the appropriate controller and method, possibly with
 arguments.</p>
 <p>More information about routing can be found in the URI Routing
 <a class="reference internal" href="../general/routing.html"><span class="doc">documentation</span></a>.</p>
-<p>Here, the second rule in the <code class="docutils literal"><span class="pre">$routes</span></code> array matches <strong>any</strong> request
+<p>Here, the second rule in the <code class="docutils literal"><span class="pre">$pathFrontEnd</span></code> array matches <strong>any</strong> request
 using the wildcard string <code class="docutils literal"><span class="pre">(:any)</span></code>. and passes the parameter to the
 <code class="docutils literal"><span class="pre">view()</span></code> method of the <code class="docutils literal"><span class="pre">Pages</span></code> class.</p>
 <p>Now visit <code class="docutils literal"><span class="pre">index.php/about</span></code>. Did it get routed correctly to the <code class="docutils literal"><span class="pre">view()</span></code>

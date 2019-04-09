@@ -598,7 +598,7 @@
 </ul>
 </li>
 <li>General Changes<ul>
-<li>Allowed PHP 4-style constructors (<code class="docutils literal"><span class="pre">Matching_name::Matching_name()</span></code> methods) to be used as routes, if there’s a <code class="docutils literal"><span class="pre">__construct()</span></code> to override them.</li>
+<li>Allowed PHP 4-style constructors (<code class="docutils literal"><span class="pre">Matching_name::Matching_name()</span></code> methods) to be used as pathFrontEnd, if there’s a <code class="docutils literal"><span class="pre">__construct()</span></code> to override them.</li>
 </ul>
 </li>
 </ul>
@@ -869,7 +869,7 @@ and <a class="reference external" href="https://tools.ietf.org/html/rfc6585">658
 <h3>Bug fixes for 3.0.2<a class="headerlink" href="#bug-fixes-for-3-0-2" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Fixed a bug (#2284) - <a class="reference internal" href="database/index.html"><span class="doc">Database</span></a> method <code class="docutils literal"><span class="pre">protect_identifiers()</span></code> breaks when <a class="reference internal" href="database/query_builder.html"><span class="doc">Query Builder</span></a> isn’t enabled.</li>
-<li>Fixed a bug (#4052) - <a class="reference internal" href="general/routing.html"><span class="doc">Routing</span></a> with anonymous functions didn’t work for routes that don’t use regular expressions.</li>
+<li>Fixed a bug (#4052) - <a class="reference internal" href="general/routing.html"><span class="doc">Routing</span></a> with anonymous functions didn’t work for pathFrontEnd that don’t use regular expressions.</li>
 <li>Fixed a bug (#4056) - <a class="reference internal" href="libraries/input.html"><span class="doc">Input Library</span></a> method <code class="docutils literal"><span class="pre">get_request_header()</span></code> could not return a value unless <code class="docutils literal"><span class="pre">request_headers()</span></code> was called beforehand.</li>
 <li>Fixed a bug where the <a class="reference internal" href="database/index.html"><span class="doc">Database Class</span></a> entered an endless loop if it fails to connect with the ‘sqlsrv’ driver.</li>
 <li>Fixed a bug (#4065) - <a class="reference internal" href="database/index.html"><span class="doc">Database</span></a> method <code class="docutils literal"><span class="pre">protect_identifiers()</span></code> treats a traling space as an alias separator if the input doesn’t contain ‘ AS ‘.</li>

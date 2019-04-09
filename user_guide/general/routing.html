@@ -445,7 +445,7 @@ name, but in the example above it instead has a product ID. To
 overcome this, CodeIgniter allows you to remap the URI handler.</p>
 <div class="section" id="setting-your-own-routing-rules">
 <h2>Setting your own routing rules<a class="headerlink" href="#setting-your-own-routing-rules" title="Permalink to this headline">¶</a></h2>
-<p>Routing rules are defined in your <em>application/config/routes.php</em> file.
+<p>Routing rules are defined in your <em>application/config/pathFrontEnd.php</em> file.
 In it you’ll see an array called <code class="docutils literal"><span class="pre">$route</span></code> that permits you to specify
 your own routing criteria. Routes can either be specified using wildcards
 or Regular Expressions.</p>
@@ -472,7 +472,7 @@ respectively.</p>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">Routes will run in the order they are defined. Higher routes
+<p class="last">Routes will run in the order they are defined. Higher pathFrontEnd
 will always take precedence over lower ones.</p>
 </div>
 <div class="admonition note">
@@ -561,8 +561,8 @@ the back-references. Example:</p>
 </pre></div>
 </div>
 </div>
-<div class="section" id="using-http-verbs-in-routes">
-<h2>Using HTTP verbs in routes<a class="headerlink" href="#using-http-verbs-in-routes" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="using-http-verbs-in-pathFrontEnd">
+<h2>Using HTTP verbs in pathFrontEnd<a class="headerlink" href="#using-http-verbs-in-pathFrontEnd" title="Permalink to this headline">¶</a></h2>
 <p>It is possible to use HTTP verbs (request method) to define your routing rules.
 This is particularly useful when building RESTful applications. You can use standard HTTP
 verbs (GET, PUT, POST, DELETE, PATCH) or a custom one such (e.g. PURGE). HTTP verb rules
@@ -580,9 +580,9 @@ controller method.</p>
 mapped to the <code class="docutils literal"><span class="pre">Product::delete()</span></code> method, passing the numeric value as the first parameter.</p>
 <p>Using HTTP verbs is of course, optional.</p>
 </div>
-<div class="section" id="reserved-routes">
-<h2>Reserved Routes<a class="headerlink" href="#reserved-routes" title="Permalink to this headline">¶</a></h2>
-<p>There are three reserved routes:</p>
+<div class="section" id="reserved-pathFrontEnd">
+<h2>Reserved Routes<a class="headerlink" href="#reserved-pathFrontEnd" title="Permalink to this headline">¶</a></h2>
+<p>There are three reserved pathFrontEnd:</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$route</span><span class="p">[</span><span class="s1">&#39;default_controller&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;welcome&#39;</span><span class="p">;</span>
 </pre></div>
 </div>
